@@ -7,32 +7,290 @@
     <title>LLM's</title>
     <link rel="stylesheet" href="./styles.css">
     <script type="application/json" id="data">[
-        {
-            "name": "Llama 3.3 8B",
-            "company": "Meta",
-            "inference": "Meta",
-            "contextSize": 128000,
-            "maxOutput": 4000,
-            "throughput": 243,
-            "latency": 0.59,
-            "inCost": 0,
-            "outCost": 0
+  {
+    "company": "Meta",
+    "name": "Llama 3.3 8B",
+    "size": 8,
+    "inference": "Meta",
+    "contextSize": 128,
+    "maxOutput": 4,
+    "throughput": 243,
+    "latency": 0.59,
+    "inCost": 0,
+    "outCost": 0
+  },
+  {
+    "company": "Liquid",
+    "name": "LFM 7B",
+    "size": 7,
+    "inference": "Lambda",
+    "contextSize": 33,
+    "maxOutput": 33,
+    "throughput": 104,
+    "latency": 0.49,
+    "inCost": 0.02,
+    "outCost": 0.03
+  },
+  {
+    "company": "Cohere",
+    "name": "Command R7B (12 2024)",
+    "size": 7,
+    "inference": "Cohere",
+    "contextSize": 128,
+    "maxOutput": 4,
+    "throughput": 185,
+    "latency": 0.29,
+    "inCost": 0.038,
+    "outCost": 0.15
+  },
+  {
+    "company": "Mistral",
+    "name": "Ministral 3B",
+    "size": 3,
+    "inference": "Mistral",
+    "contextSize": 131,
+    "maxOutput": 131,
+    "throughput": 219,
+    "latency": 0.17,
+    "inCost": 0.04,
+    "outCost": 0.04
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 3.2 1B",
+    "size": 1,
+    "inference": "SambaNova",
+    "contextSize": 16,
+    "maxOutput": 4,
+    "throughput": 2341,
+    "latency": 0.35,
+    "inCost": 0.04,
+    "outCost": 0.08
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 3.1 8B",
+    "size": 8,
+    "inference": "Groq",
+    "contextSize": 131,
+    "maxOutput": 131,
+    "throughput": 1457,
+    "latency": 0.3,
+    "inCost": 0.05,
+    "outCost": 0.08
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 3.2 3B",
+    "size": 3,
+    "inference": "SambaNova",
+    "contextSize": 4,
+    "maxOutput": 4,
+    "throughput": 3100,
+    "latency": 0.3,
+    "inCost": 0.08,
+    "outCost": 0.16
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 3.1 8B",
+    "size": 8,
+    "inference": "Cerebras",
+    "contextSize": 32,
+    "maxOutput": 32,
+    "throughput": 3535,
+    "latency": 0.14,
+    "inCost": 0.1,
+    "outCost": 0.1
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 4 Scout",
+    "size": 109,
+    "inference": "Groq",
+    "contextSize": 131,
+    "maxOutput": 8,
+    "throughput": 889,
+    "latency": 0.27,
+    "inCost": 0.11,
+    "outCost": 0.34
+  },
+  {
+    "company": "Liquid",
+    "name": "LFM 40B MoE",
+    "size": 40.3,
+    "inference": "Lambda",
+    "contextSize": 66,
+    "maxOutput": 66,
+    "throughput": 175,
+    "latency": 0.22,
+    "inCost": 0.15,
+    "outCost": 0.15
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 4 Maverik",
+    "size": 400,
+    "inference": "Groq",
+    "contextSize": 131,
+    "maxOutput": 8,
+    "throughput": 1073,
+    "latency": 0.39,
+    "inCost": 0.2,
+    "outCost": 0.6
+  },
+  {
+    "company": "Inception",
+    "name": "Mercury Coder Small Beta",
+    "size": "Undefined",
+    "inference": "Inception",
+    "contextSize": 32,
+    "maxOutput": 32,
+    "throughput": 716,
+    "latency": 0.46,
+    "inCost": 0.25,
+    "outCost": 1
+  },
+  {
+    "company": "Qwen",
+    "name": "QwQ 32B",
+    "size": 32,
+    "inference": "Groq",
+    "contextSize": 131,
+    "maxOutput": 131,
+    "throughput": 551,
+    "latency": 0.57,
+    "inCost": 0.29,
+    "outCost": 0.39
+  },
+  {
+    "company": "xAI",
+    "name": "Gro 3 Mini Beta",
+    "size": "Undefined",
+    "inference": "xAI",
+    "contextSize": 131,
+    "maxOutput": 131,
+    "throughput": 145,
+    "latency": 0.31,
+    "inCost": 0.3,
+    "outCost": 0.5
+  },
+  {
+    "company": "Qwen",
+    "name": "Qwen 3 32B",
+    "size": 32,
+    "inference": "Cerebras",
+    "contextSize": 33,
+    "maxOutput": 33,
+    "throughput": 3167,
+    "latency": 0.47,
+    "inCost": 0.4,
+    "outCost": 0.8
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 4 Scout",
+    "size": 109,
+    "inference": "Cerebras",
+    "contextSize": 32,
+    "maxOutput": 32,
+    "throughput": 2067,
+    "latency": 0.32,
+    "inCost": 0.65,
+    "outCost": 0.85
+  },
+  {
+    "company": "DeepSeek",
+    "name": "DeepSeek V3 0324",
+    "size": 685,
+    "inference": "Baseten",
+    "contextSize": 164,
+    "maxOutput": 131,
+    "throughput": 110,
+    "latency": 0.34,
+    "inCost": 0.77,
+    "outCost": 0.77
+  },
+  {
+    "company": "Meta",
+    "name": "Llama 3.3 70B",
+    "size": 70,
+    "inference": "Cerebras",
+    "contextSize": 32,
+    "maxOutput": 32,
+    "throughput": 2302,
+    "latency": 0.25,
+    "inCost": 0.85,
+    "outCost": 1.2
+  },
+  {
+    "company": "DeepSeek",
+    "name": "R1 Distill Llama 70B",
+    "size": 70,
+    "inference": "Cerebras",
+    "contextSize": 32,
+    "maxOutput": 32,
+    "throughput": 2303,
+    "latency": 0.55,
+    "inCost": 2.2,
+    "outCost": 2.5
+  },
+  {
+    "company": "DeepSeek",
+    "name": "DeepSeek R1 0528",
+    "size": 671,
+    "inference": "Baseten",
+    "contextSize": 164,
+    "maxOutput": 131,
+    "throughput": 105,
+    "latency": 0.48,
+    "inCost": 2.55,
+    "outCost": 5.95
+  }
+]
+</script>
+    <script>
+        function loadOptions() {
+            const dataElement = document.getElementById("data")
+            const llm = JSON.parse(dataElement.textContent)
+            const tableElement = document.getElementById("llm")
+            const tableBody = document.createElement("tbody")
+
+            llm.map((item, index) => {
+                const row = document.createElement("tr")
+                Object.values(llm[index]).map((value) => {
+                    const cell = document.createElement("td")
+                    cell.append(value)
+                    row.append(cell)
+                })
+                tableBody.append(row)
+            })
+            tableElement.append(tableBody)
         }
-    ]</script>
-    <script src="./fetchData.js"></script>
+    </script>
 </head>
 
-<body>
+<body onload="loadOptions()">
     <main>
         <article>
-            <section id="options">
-                <table>
-                    <tr>
-                        <th>model</th>
-                        <th>throughput</th>
-                        <th>pricing</th>
-                    </tr>
-                    <!-- llms data rows -->
+            <section>
+                <table id="llm">
+                    <caption>20 AI assistants with speeds from 100 to more than 3000 tokens per second ranked from the
+                        cheapeast. Available at OpenRouter.</caption>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Model Name</th>
+                            <th>Size (B)</th>
+                            <th>Engine</th>
+                            <th>Context Size (K)</th>
+                            <th>Max Output (K)</th>
+                            <th>Throughput</th>
+                            <th>Latency</th>
+                            <th>Context Cost ($/M)</th>
+                            <th>Output Cost ($/M)</th>
+                        </tr>
+                    </thead>
                 </table>
             </section>
         </article>
