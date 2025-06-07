@@ -1,4 +1,5 @@
-(async () => {
-    const data = await fetch('./data.json')
-    console.log(data)
-})();
+const dataElement = document.getElementById('data')
+
+const data = JSON.parse(dataElement.textContent)
+
+console.log(data)
