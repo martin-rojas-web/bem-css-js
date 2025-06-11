@@ -468,9 +468,15 @@
         const row = document.createElement("tr")
         Object.values(freeAi[index]).map((value) => {
           const cell = document.createElement("td")
+          cell.classList.add("tb__cell")
           cell.append(value)
           row.append(cell)
         })
+        row.classList.add("tb__row")
+        // identify even index from llm data map
+        if (index % 2 != 0) {
+          row.classList.add("tb__row--even")
+        }
         tableBody.append(row)
 
       })
@@ -478,30 +484,27 @@
   </script>
 </head>
 
-<body onload="loadOptions()">
+<body class="doc doc--theme-dark" onload="loadOptions()">
   <main>
     <article>
       <header>
         <h1>Medium-to-Large AI's, Mixture-of-Experts and Even 'Thinking' Models for Free. With speeds over 100</h1>
       </header>
+      <section class="block">
+        <h2>Introduction</h2>
+        <p>Artificial Intelligence (AI) has made tremendous progress in recent years, particularly in the field of Large
+          Language Models (LLMs). These models are designed to process and understand human language, enabling
+          applications such as chatbots, content generation, and language translation. At their core, LLMs work by
+          predicting the next word in a sequence, given the context of the conversation or text. This prediction is
+          based
+          on complex algorithms and massive amounts of training data.</p>
 
-      <h2>Introduction</h2>
-      <p>Artificial Intelligence (AI) has made tremendous progress in recent years, particularly in the field of Large
-        Language Models (LLMs). These models are designed to process and understand human language, enabling
-        applications such as chatbots, content generation, and language translation. At their core, LLMs work by
-        predicting the next word in a sequence, given the context of the conversation or text. This prediction is
-        based
-        on complex algorithms and massive amounts of training data.</p>
-
-      <section class="concept">
         <h3>Mixture of Experts Architecture. A Dream Team of Nerds Inside Your AI Assistant</h3>
         <p>Before the introduction of Mixture of Experts (MoE) architecture models, LLMs were typically designed as a
           single, large model that handled all tasks. However, MoE models have revolutionized the field by combining
           multiple smaller models, each specializing in a specific task or domain. This approach has led to significant
           improvements in performance, efficiency, and flexibility.</p>
-      </section>
 
-      <section class="concept">
         <h3>Thinking Before Answering Decreases Error Rate</h3>
         <p>One of the most exciting developments in LLMs is the emergence of "Thinking" models, which can generate
           step-by-step reasoning and explanations for their responses. These models have the potential to greatly
@@ -511,80 +514,83 @@
           completely free.</p>
       </section>
 
-      <h3>Here's some LLM's you can use for FREE at OpenRouter.</h3>
-      <!-- todo: add table -->
-      <table>
-        <thead>
-          <tr>
-            <td>Index</td>
-            <td>Release Date</td>
-            <td>Company</td>
-            <td>Model</td>
-            <td>Size (B)</td>
-            <td>Engine</td>
-            <td>Context Size (K)</td>
-            <td>Max Output (K)</td>
-            <td>Throughput (tps)</td>
-            <td>Latency (s)</td>
-            <td>Context Cost (USD/1M tokens)</td>
-            <td>Output Cost (USD/1M tokens)</td>
-          </tr>
-        </thead>
-        <tbody id="freeLlms">
-        </tbody>
-      </table>
+      <section class="block block--scrollable">
+        <h3>Here's some LLM's you can use for FREE at OpenRouter.</h3>
+        <table class="tb">
+          <thead>
+            <tr class="tb__row tb__row--heading">
+              <td class="tb__cell">Index</td>
+              <td class="tb__cell">Release Date</td>
+              <td class="tb__cell">Company</td>
+              <td class="tb__cell">Model</td>
+              <td class="tb__cell">Size (B)</td>
+              <td class="tb__cell">Engine</td>
+              <td class="tb__cell">Context Size (K)</td>
+              <td class="tb__cell">Max Output (K)</td>
+              <td class="tb__cell">Throughput (tps)</td>
+              <td class="tb__cell">Latency (s)</td>
+              <td class="tb__cell">Context Cost (USD/1M tokens)</td>
+              <td class="tb__cell">Output Cost (USD/1M tokens)</td>
+            </tr>
+          </thead>
+          <tbody id="freeLlms">
+          </tbody>
+          <caption>These are typical values. Go to OpenRouter web to get the fresher statistics.</caption>
+        </table>
+      </section>
+      <section class="block">
+        <h2>Selection</h2>
+        <p>When it comes to selecting an LLM for a specific task, there are several factors to consider. One of the most
+          important is speed, as it directly impacts the user experience. With speeds ranging from 100 to 300 tokens per
+          second, users can engage in casual conversations, generate content <strong>yet a long output (i.e., +2000
+            words)
+            can
+            make you wait many seconds</strong> . A customer support chatbot can respond quickly to user queries, while
+          a
+          creative
+          writer can generate text at a rapid pace <strong>but not instantaneously.</strong>
+        </p>
+        <!-- todo: add a link to the fastest AI's article -->
 
-      <h2>Selection</h2>
-      <p>When it comes to selecting an LLM for a specific task, there are several factors to consider. One of the most
-        important is speed, as it directly impacts the user experience. With speeds ranging from 100 to 300 tokens per
-        second, users can engage in casual conversations, generate content <strong>yet a long output (i.e., +2000 words)
-          can
-          make you wait many seconds</strong> . A customer support chatbot can respond quickly to user queries, while a
-        creative
-        writer can generate text at a rapid pace <strong>but not instantaneously.</strong>
-      </p>
-      <!-- todo: add a link to the fastest AI's article -->
+        <h3>Size Matters</h3>
+        <p>The size of the model, measured in billions of parameters, also matters. Larger models tend to be more
+          accurate
+          and capable, but may require more computational resources. A model with 10 billion parameters may be
+          sufficient
+          for simple tasks, while a model with 400 billion parameters may be needed for more complex applications.</p>
 
-      <h3>Size Matters</h3>
-      <p>The size of the model, measured in billions of parameters, also matters. Larger models tend to be more
-        accurate
-        and capable, but may require more computational resources. A model with 10 billion parameters may be
-        sufficient
-        for simple tasks, while a model with 400 billion parameters may be needed for more complex applications.</p>
+        <h3>Methodology for Picking a Model</h3>
+        <ol>
+          <li><strong>Define the task:</strong> Identify the specific application or use case for the LLM.</li>
+          <li><strong>Determine the required speed:</strong> Consider the desired response time and throughput.</li>
+          <li><strong>Choose a model size:</strong> Select a model with a suitable number of parameters for the task
+            complexity.</li>
+          <li><strong>Evaluate the model's capabilities:</strong> Consider the model's performance on relevant
+            benchmarks
+            and tasks.</li>
+        </ol>
 
-      <h3>Methodology for Picking a Model</h3>
-      <ol>
-        <li><strong>Define the task:</strong> Identify the specific application or use case for the LLM.</li>
-        <li><strong>Determine the required speed:</strong> Consider the desired response time and throughput.</li>
-        <li><strong>Choose a model size:</strong> Select a model with a suitable number of parameters for the task
-          complexity.</li>
-        <li><strong>Evaluate the model's capabilities:</strong> Consider the model's performance on relevant
-          benchmarks
-          and tasks.</li>
-      </ol>
+        <h2>Editor's Pick</h2>
+        <p>After evaluating several LLMs, we recommend the following two models:</p>
 
-      <h2>Editor's Pick</h2>
-      <p>After evaluating several LLMs, we recommend the following two models:</p>
+        <h3>Distill Qwen Model from DeepSeek</h3>
+        <ul>
+          <li>Model Size: 32 billion parameters</li>
+          <li>Speed: 147 tokens per second</li>
+          <li>Description: An excellent choice for applications that require step-by-step reasoning and explanations.
+            Large size and MoE architecture make it well-suited for complex tasks such as creative writing, learning
+            aids, and research assistance.</li>
+        </ul>
 
-      <h3>Distill Qwen Model from DeepSeek</h3>
-      <ul>
-        <li>Model Size: 32 billion parameters</li>
-        <li>Speed: 147 tokens per second</li>
-        <li>Description: An excellent choice for applications that require step-by-step reasoning and explanations.
-          Large size and MoE architecture make it well-suited for complex tasks such as creative writing, learning
-          aids, and research assistance.</li>
-      </ul>
+        <h3>Llama 4 Maverick Model from Meta</h3>
+        <ul>
+          <li>Model Size: 400 billion parameters</li>
+          <li>Speed: 161 tokens per second</li>
+          <li>Description: Ideal for applications that require high accuracy and flexibility. Massive size and MoE
+            architecture make it suitable for demanding tasks such as customer support chat, language translation, and
+            content generation.</li>
+        </ul>
 
-      <h3>Llama 4 Maverick Model from Meta</h3>
-      <ul>
-        <li>Model Size: 400 billion parameters</li>
-        <li>Speed: 161 tokens per second</li>
-        <li>Description: Ideal for applications that require high accuracy and flexibility. Massive size and MoE
-          architecture make it suitable for demanding tasks such as customer support chat, language translation, and
-          content generation.</li>
-      </ul>
-
-      <section class="conclusions">
         <p>Both models are free to use and offer exceptional performance, making them attractive options for a wide
           range
           of applications. Whether you need a Thinking model for complex problem-solving or a highly accurate MoE model

@@ -1,22 +1,22 @@
-body {
-    margin: 0;
+.doc--theme-dark {
+    background-color: #313233;
+    color: #908f8e;
 }
 
-article {
-    color: rgb(14, 14, 95);
+.block--scrollable {
+    width: 100%;
+    overflow: scroll;
 }
 
-header {
-    background-color: lavender;
-    height: 30vh;
+.tb__row--even {
+    background-color: rgba(109, 109, 109, 0.322)
 }
 
-.concept {
-    border-radius: 24px;
-    background-color: yellow;
+.tb__row--heading {
+    background-color: rgba(102, 102, 102, 0.719);
 }
 
-.conclusions {
-    color: white;
-    background-color: navy;
+.tb__cell {
+    text-align: center;
+    padding: 4px;
 }
