@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lightning-Fast AI Assistants at OpenRouter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/json" id="data">[
+  {
+  "index": 1,
+  "release": "04-05-25",
+  "company": "Meta",
+  "name": "Llama 4 Maverick",
+  "size": "400",
+  "inference": "Groq",
+  "contextSize": 131,
+  "maxOutput": 8,
+  "throughput": 1073,
+  "latency": 0.39,
+  "inCost": 0.2,
+  "outCost": 0.6
+  },
+  {
+  "index": 2,
+  "release": "04-05-25",
+  "company": "Meta",
+  "name": "Llama 4 Scout",
+  "size": "109",
+  "inference": "Cerebras",
+  "contextSize": 32,
+  "maxOutput": 32,
+  "throughput": 2067,
+  "latency": 0.32,
+  "inCost": 0.65,
+  "outCost": 0.85
+  },
+  {
+  "index": 3,
+  "release": "04-05-25",
+  "company": "Meta",
+  "name": "Llama 4 Scout",
+  "size": "109",
+  "inference": "Groq",
+  "contextSize": 131,
+  "maxOutput": 8,
+  "throughput": 889,
+  "latency": 0.27,
+  "inCost": 0.11,
+  "outCost": 0.34
+  },
+  {
+  "index": 4,
+  "release": "01-23-25",
+  "company": "DeepSeek",
+  "name": "R1 Distill Llama 70B",
+  "size": "70",
+  "inference": "Cerebras",
+  "contextSize": 32,
+  "maxOutput": 32,
+  "throughput": 2303,
+  "latency": 0.55,
+  "inCost": 2.2,
+  "outCost": 2.5
+  },
+  {
+  "index": 5,
+  "release": "12-06-24",
+  "company": "Meta",
+  "name": "Llama 3.3 70B",
+  "size": "70",
+  "inference": "Cerebras",
+  "contextSize": 32,
+  "maxOutput": 32,
+  "throughput": 2302,
+  "latency": 0.25,
+  "inCost": 0.85,
+  "outCost": 1.2
+  },
+  {
+  "index": 6,
+  "release": "04-28-25",
+  "company": "Qwen",
+  "name": "Qwen 3 32B",
+  "size": "32",
+  "inference": "Cerebras",
+  "contextSize": 33,
+  "maxOutput": 33,
+  "throughput": 3167,
+  "latency": 0.47,
+  "inCost": 0.4,
+  "outCost": 0.8
+  },
+  {
+  "index": 7,
+  "release": "09-25-24",
+  "company": "Meta",
+  "name": "Llama 3.1 8B",
+  "size": "8",
+  "inference": "Cerebras",
+  "contextSize": 32,
+  "maxOutput": 32,
+  "throughput": 3535,
+  "latency": 0.14,
+  "inCost": 0.1,
+  "outCost": 0.1
+  },
+  {
+  "index": 8,
+  "release": "09-25-24",
+  "company": "Meta",
+  "name": "Llama 3.1 8B",
+  "size": "8",
+  "inference": "Groq",
+  "contextSize": 131,
+  "maxOutput": 131,
+  "throughput": 1457,
+  "latency": 0.3,
+  "inCost": 0.05,
+  "outCost": 0.08
+  },
+  {
+  "index": 9,
+  "release": "09-25-24",
+  "company": "Meta",
+  "name": "Llama 3.2 3B",
+  "size": "3",
+  "inference": "SambaNova",
+  "contextSize": 4,
+  "maxOutput": 4,
+  "throughput": 3100,
+  "latency": 0.3,
+  "inCost": 0.08,
+  "outCost": 0.16
+  },
+  {
+  "index": 10,
+  "release": "09-25-24",
+  "company": "Meta",
+  "name": "Llama 3.2 1B",
+  "size": "1",
+  "inference": "SambaNova",
+  "contextSize": 16,
+  "maxOutput": 4,
+  "throughput": 2341,
+  "latency": 0.35,
+  "inCost": 0.04,
+  "outCost": 0.08
+  },
+  {
+  "index": 11,
+  "release": "04-30-25",
+  "company": "Inception",
+  "name": "Mercury Coder Small Beta",
+  "size": "undefined",
+  "inference": "Inception",
+  "contextSize": 32,
+  "maxOutput": 32,
+  "throughput": 716,
+  "latency": 0.46,
+  "inCost": 0.25,
+  "outCost": 1
+  },
+  {
+  "index": 12,
+  "release": "12-11-24",
+  "company": "Google",
+  "name": "Gemini 2.0 Flash",
+  "size": "undefined",
+  "inference": "Google AI Studio",
+  "contextSize": 1000,
+  "maxOutput": 8,
+  "throughput": 163,
+  "latency": 0.48,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 13,
+  "release": "04-09-25",
+  "company": "xAI",
+  "name": "Grok 3 Mini Beta",
+  "size": "undefined",
+  "inference": "xAI",
+  "contextSize": 131,
+  "maxOutput": 131,
+  "throughput": 145,
+  "latency": 0.31,
+  "inCost": 0.3,
+  "outCost": 0.5
+  },
+  {
+  "index": 14,
+  "release": "10-11-24",
+  "company": "Inflection",
+  "name": "Inflection 3 Pi",
+  "size": "undefined",
+  "inference": "Inflection",
+  "contextSize": 8,
+  "maxOutput": 1,
+  "throughput": 41,
+  "latency": 2.92,
+  "inCost": 2.5,
+  "outCost": 10
+  },
+  {
+  "index": 15,
+  "release": "03-24-25",
+  "company": "DeepSeek",
+  "name": "DeepSeek V3 0324",
+  "size": "685",
+  "inference": "Baseten",
+  "contextSize": 164,
+  "maxOutput": 131,
+  "throughput": 110,
+  "latency": 0.34,
+  "inCost": 0.77,
+  "outCost": 0.77
+  },
+  {
+  "index": 16,
+  "release": "05-28-25",
+  "company": "DeepSeek",
+  "name": "DeepSeek R1 0528",
+  "size": "671",
+  "inference": "Baseten",
+  "contextSize": 164,
+  "maxOutput": 131,
+  "throughput": 85,
+  "latency": 0.48,
+  "inCost": 2.55,
+  "outCost": 5.95
+  },
+  {
+  "index": 17,
+  "release": "04-05-25",
+  "company": "Meta",
+  "name": "Llama 4 Maverick",
+  "size": "400",
+  "inference": "Meta",
+  "contextSize": 128,
+  "maxOutput": 4,
+  "throughput": 161,
+  "latency": 0.51,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 18,
+  "release": "04-28-25",
+  "company": "Qwen",
+  "name": "Qwen3 235B A22B",
+  "size": "235",
+  "inference": "Fireworks",
+  "contextSize": 128,
+  "maxOutput": 128,
+  "throughput": 85,
+  "latency": 0.71,
+  "inCost": 0.22,
+  "outCost": 0.88
+  },
+  {
+  "index": 19,
+  "release": "04-05-25",
+  "company": "Meta",
+  "name": "Llama 4 Scout",
+  "size": "109",
+  "inference": "Meta",
+  "contextSize": 128,
+  "maxOutput": 4,
+  "throughput": 156,
+  "latency": 0.52,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 20,
+  "release": "09-30-24",
+  "company": "Liquid",
+  "name": "LFM 40B MoE",
+  "size": "40.3",
+  "inference": "Lambda",
+  "contextSize": 66,
+  "maxOutput": 66,
+  "throughput": 175,
+  "latency": 0.22,
+  "inCost": 0.15,
+  "outCost": 0.15
+  },
+  {
+  "index": 21,
+  "release": "03-05-25",
+  "company": "Qwen",
+  "name": "QwQ 32B",
+  "size": "32",
+  "inference": "Groq",
+  "contextSize": 131,
+  "maxOutput": 131,
+  "throughput": 551,
+  "latency": 0.57,
+  "inCost": 0.29,
+  "outCost": 0.39
+  },
+  {
+  "index": 22,
+  "release": "01-29-25",
+  "company": "DeepSeek",
+  "name": "R1 Distill Qwen 32B",
+  "size": "32",
+  "inference": "Nineteen",
+  "contextSize": 16,
+  "maxOutput": 16,
+  "throughput": 147,
+  "latency": 0.52,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 23,
+  "release": "01-29-25",
+  "company": "DeepSeek",
+  "name": "R1 Distill Qwen 14B",
+  "size": "14",
+  "inference": "Chutes",
+  "contextSize": 64,
+  "maxOutput": 64,
+  "throughput": 187,
+  "latency": 0.95,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 24,
+  "release": "09-30-24",
+  "company": "TheDrummer",
+  "name": "Rocinante 12B",
+  "size": "12",
+  "inference": "Infermatic",
+  "contextSize": 33,
+  "maxOutput": 33,
+  "throughput": 75,
+  "latency": 0.39,
+  "inCost": 0.25,
+  "outCost": 0.5
+  },
+  {
+  "index": 25,
+  "release": "05-14-25",
+  "company": "Meta",
+  "name": "Llama 3.3 8B",
+  "size": "8",
+  "inference": "Meta",
+  "contextSize": 128,
+  "maxOutput": 4,
+  "throughput": 243,
+  "latency": 0.59,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 26,
+  "release": "10-03-24",
+  "company": "Google",
+  "name": "Gemini 1.5 Flash 8B",
+  "size": "8",
+  "inference": "Google AI Studio",
+  "contextSize": 1000,
+  "maxOutput": 8,
+  "throughput": 204,
+  "latency": 0.21,
+  "inCost": 0.075,
+  "outCost": 0.3
+  },
+  {
+  "index": 27,
+  "release": "10-16-24",
+  "company": "Qwen",
+  "name": "Qwen 2.5 7B",
+  "size": "7",
+  "inference": "Nineteen",
+  "contextSize": 33,
+  "maxOutput": 33,
+  "throughput": 300,
+  "latency": 0.61,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 28,
+  "release": "12-14-24",
+  "company": "Cohere",
+  "name": "Command R7B (12 2024)",
+  "size": "7",
+  "inference": "Cohere",
+  "contextSize": 128,
+  "maxOutput": 4,
+  "throughput": 185,
+  "latency": 0.29,
+  "inCost": 0.038,
+  "outCost": 0.15
+  },
+  {
+  "index": 29,
+  "release": "01-25-25",
+  "company": "Liquid",
+  "name": "LFM 7B",
+  "size": "7",
+  "inference": "Lambda",
+  "contextSize": 33,
+  "maxOutput": 33,
+  "throughput": 104,
+  "latency": 0.49,
+  "inCost": 0.02,
+  "outCost": 0.03
+  },
+  {
+  "index": 30,
+  "release": "09-25-24",
+  "company": "Meta",
+  "name": "Llama 3.2 3B",
+  "size": "3",
+  "inference": "Nineteen",
+  "contextSize": 20,
+  "maxOutput": 20,
+  "throughput": 353,
+  "latency": 0.98,
+  "inCost": 0,
+  "outCost": 0
+  },
+  {
+  "index": 31,
+  "release": "10-17-24",
+  "company": "Mistral",
+  "name": "Ministral 3B",
+  "size": "3",
+  "inference": "Mistral",
+  "contextSize": 131,
+  "maxOutput": 131,
+  "throughput": 219,
+  "latency": 0.17,
+  "inCost": 0.04,
+  "outCost": 0.04
+  },
+  {
+  "index": 32,
+  "release": "09-25-24",
+  "company": "Meta",
+  "name": "Llama 3.2 1B",
+  "size": "1",
+  "inference": "Cursoe",
+  "contextSize": 131,
+  "maxOutput": 8,
+  "throughput": 263,
+  "latency": 0.87,
+  "inCost": 0,
+  "outCost": 0
+  }
+  ]
+</script>
+  <script>
+    function loadOptions() {
+
+      function compareNumbers(a, b) {
+        return a - b;
+      }
+
+      function compareNumbersBackwards(a, b) {
+        return b - a;
+      }
+
+      const dataElement = document.getElementById("data")
+      const data = JSON.parse(dataElement.textContent)
+      const tableBody = document.getElementById("fastestAi")
+
+      // initiate array to save speeds from llms data
+      const speeds = []
+
+      // form a new array out of speeds solely
+      data.map((item, index) => {
+        speeds.push(item.throughput)
+      })
+
+      // order ascending speeds
+      speeds.sort(compareNumbers)
+
+      // trunk the array to the fastest 9
+      const highestSpeeds = speeds.slice(speeds.length - 9)
+
+      // order descending fastest
+      highestSpeeds.sort(compareNumbersBackwards)
+
+      // initiate fastest ai List
+      const fastAi = []
+
+      // loop through highestSpeeds
+      highestSpeeds.map((speedVal) => {
+        // search llm matching speed
+        // if more than one llm have the same troughput value this will misbehave
+        const found = data.find((llm) => llm.throughput == speedVal)
+        // save found llm
+        fastAi.push(found)
+      })
+
+      fastAi.map((item, index) => {
+
+        const row = document.createElement("tr")
+        Object.values(fastAi[index]).map((value) => {
+          const cell = document.createElement("td")
+          cell.classList.add("tb__cell")
+          cell.append(value)
+          row.append(cell)
+        })
+        row.classList.add("tb__row")
+        // identify even index from llm data map
+        if (index % 2 != 0) {
+          row.classList.add("tb__row--even")
+        }
+        tableBody.append(row)
+
+      })
+    }
+  </script>
+</head>
+
+<body class="doc doc--theme-dark" onload="loadOptions()">
+  <main>
+    <article>
+      <header>
+        <h1>Lightning-Fast AI Assistants at OpenRouter</h1>
+      </header>
+      <section class="block">
+        <h2>Introduction</h2>
+        <p>Artificial Intelligence (AI) has made tremendous progress in recent years, particularly in the field of Large
+          Language Models (LLMs). These models are designed to process and understand human language, enabling
+          applications such as chatbots, content generation, and language translation. At their core, LLMs work by
+          predicting the next word in a sequence, given the context of the conversation or text. This prediction is
+          based on complex algorithms and massive amounts of training data.</p>
+
+        <h3>Speed Matters: Fast AI Assistants for Real-Time Applications</h3>
+        <p>When it comes to selecting an LLM for a specific task, speed is a critical factor to consider. Faster models
+          enable real-time applications, such as chatbots, virtual assistants, and content generation. In this article,
+          we'll explore the fastest AI options available at OpenRouter, with speeds over 2000 tokens per second.</p>
+
+        <h3>Lightning-Fast LLMs: Unlocking New Possibilities</h3>
+        <p>The emergence of lightning-fast LLMs has opened up new possibilities for AI applications. With speeds of over
+          2000 tokens per second, these models can handle demanding tasks, such as real-time language translation,
+          sentiment analysis, and text summarization. In this article, we'll delve into the world of fast AI assistants
+          and explore the benefits and possibilities they offer.</p>
+      </section>
+
+      <section class="block block--scrollable">
+        <h3>These are the Fastest LLM's you can get at OpenRouter.</h3>
+        <table class="tb">
+          <thead>
+            <tr class="tb__row tb__row--heading">
+              <td class="tb__cell">Index</td>
+              <td class="tb__cell">Release Date</td>
+              <td class="tb__cell">Company</td>
+              <td class="tb__cell">Model</td>
+              <td class="tb__cell">Size (B)</td>
+              <td class="tb__cell">Engine</td>
+              <td class="tb__cell">Context Size (K)</td>
+              <td class="tb__cell">Max Output (K)</td>
+              <td class="tb__cell">Throughput (tps)</td>
+              <td class="tb__cell">Latency (s)</td>
+              <td class="tb__cell">Context Cost (USD/1M tokens)</td>
+              <td class="tb__cell">Output Cost (USD/1M tokens)</td>
+            </tr>
+          </thead>
+          <tbody id="fastestAi">
+          </tbody>
+          <caption>These are typical values. Go to OpenRouter web to get the fresher statistics.</caption>
+        </table>
+      </section>
+      <section class="block">
+        <h2>Selection</h2>
+        <p>When it comes to selecting a fast LLM for a specific task, there are several factors to consider. One of the
+          most important is speed, as it directly impacts the user experience. With speeds ranging from 2000 to 3000
+          tokens per second, users can engage in real-time conversations, generate content instantly, and enjoy seamless
+          interactions with AI assistants.</p>
+
+        <h3>Size and Speed: Finding the Perfect Balance</h3>
+        <p>The size of the model, measured in billions of parameters, also matters. Larger models tend to be more
+          accurate and capable, but may require more computational resources. A model with 10 billion parameters may be
+          sufficient for simple tasks, while a model with 400 billion parameters may be needed for more complex
+          applications. However, with the emergence of lightning-fast LLMs, the focus has shifted from size to speed.
+        </p>
+
+        <h3>Methodology for Picking a Fast Model</h3>
+        <ol>
+          <li><strong>Define the task:</strong> Identify the specific application or use case for the LLM.</li>
+          <li><strong>Determine the required speed:</strong> Consider the desired response time and throughput.</li>
+          <li><strong>Choose a model size:</strong> Select a model with a suitable number of parameters for the task
+            complexity.</li>
+          <li><strong>Evaluate the model's capabilities:</strong> Consider the model's performance on relevant
+            benchmarks and tasks.</li>
+        </ol>
+
+        <h2>Editor's Pick</h2>
+        <p>After evaluating several LLMs, we recommend the following two models:</p>
+
+        <h3>R1 Distill Llama 3.3 70B Model from DeepSeek</h3>
+        <ul class="benefits">
+          <li class="benefits__item">70B</li>
+          <li class="benefits__item">2303tps</li>
+          <li class="benefits__item">thinking</li>
+          <li class="benefits__item">multi-step</li>
+        </ul>
+
+        <h3>Llama 4 Scout Model from Meta</h3>
+        <ul class="benefits">
+          <li class="benefits__item">109B</li>
+          <li class="benefits__item">2067tps</li>
+          <li class="benefits__item">accuracy</li>
+          <li class="benefits__item">expertise</li>
+        </ul>
+
+        <p>Both models offer exceptional performance, making them attractive options for a wide
+          range of applications. Whether you need a fast LLM for real-time applications or a highly accurate model for
+          demanding tasks, these two models are definitely worth considering.</p>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>
