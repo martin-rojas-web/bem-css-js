@@ -14,14 +14,29 @@
     color: #adadad;
 }
 
-.doc__link {
-    background-color: rgba(109, 109, 109, 0.322);
-    color: #adadad;
-    padding: 2px 6px;
-
+.doc__title{
+    font-size: 2.2rem;
 }
 
-.block--scrollable {
+.sct__title {
+    font-size: 1.8rem;
+}
+
+.sct__subtitle {
+    font-size: 1.5rem;
+}
+
+.sct__text {
+    font-size: 1.2rem;
+}
+
+.sct__text--clickable {
+    background-color: rgba(109, 109, 109, 0.322);
+    color: white;
+    padding: 2px 6px;
+}
+
+.sct__block--scrollable {
     width: 100%;
     overflow: scroll;
 }
