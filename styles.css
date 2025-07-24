@@ -1,4 +1,9 @@
-/* :root {} */
+:root {
+  --bg-brown: rgb(65, 28, 2);
+  --bg-sand: rgb(252, 241, 216);
+  --bg-green: rgb(22, 114, 109);
+  --bg-aqua: rgb(204, 238, 229);
+}
 
 .footer {
   color: white;
@@ -18,7 +23,7 @@
 .menu {
   display: flex;
   justify-content: center;
-  background-color: rgb(82, 39, 8);
+  background-color: var(--bg-brown);
   border-radius: 4px;
   width: fit-content;
   gap: 3em;
@@ -39,7 +44,7 @@
 
 .content {
   margin: 0;
-  background-color: rgb(82, 39, 8);
+  background-color: var(--bg-brown);
 }
 
 .category__title {
@@ -67,20 +72,20 @@
   height: fit-content;
   border-radius: 4px;
   padding: 0.2em;
-  background-color: rgb(82, 39, 8);
+  background-color: var(--bg-brown);
 }
 
 .table__row {
-  background-color: rgb(209, 209, 209);
+  background-color: white;
 }
 
 .table__row--odd {
-  background-color: rgb(204, 238, 229);
+  background-color: var(--bg-aqua);
 }
 
 .table__row--heading {
   text-align: center;
-  background-color: rgb(22, 114, 109);
+  background-color: var(--bg-green);
   color: white;
   font-size: 22px;
 }
@@ -96,7 +101,7 @@
   gap: 1em;
   justify-content: center;
   box-sizing: border-box;
-  background-color: rgb(252, 241, 216);
+  background-color: var(--bg-sand);
   padding: 1em 2em;
   margin: 0;
 }
