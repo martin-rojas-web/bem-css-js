@@ -14391,6 +14391,8 @@
               // create link
               const link = document.createElement("a");
 
+              link.classList.add("table__link");
+
               // set target
               link.target = "_blank";
 
@@ -14464,25 +14466,25 @@
         </p>
       </blockquote>
       <section>
-        <details class="menu__link menu__link--borderless">
+        <details class="menu__link menu__link--transparent">
           <summary>External Links</summary>
           <nav>
-            <ul class="menu">
+            <ul class="menu menu--transparent">
               <li>
                 <a
                   href="https://openrouter.ai/models?order=newest"
-                  class="menu__link menu__link--borderless"
+                  class="menu__link menu__link--transparent"
                   target="_blank"
                   >Newest models</a
                 ><a
                   href="
 https://lmarena.ai/leaderboard"
-                  class="menu__link menu__link--borderless"
+                  class="menu__link menu__link--transparent"
                   target="_blank"
                   >User Preference</a
                 ><a
                   href="https://llm-stats.com/"
-                  class="menu__link menu__link--borderless"
+                  class="menu__link menu__link--transparent"
                   target="_blank"
                   >Evaluation</a
                 >
