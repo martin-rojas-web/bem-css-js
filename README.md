@@ -16,4 +16,4 @@ This is my first project where I use Block Element Modifier Philosophy to Struct
 
 ### Deploy
 
-* https://master.d3bn6jlncpcnd0.amplifyapp.com/
+* https://hologramfrog.xyz/ai
